@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavComponent } from "./common/nav/nav.component";
+import { NavComponent } from './common/nav/nav.component';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +10,5 @@ import { NavComponent } from "./common/nav/nav.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Inventory-and-Stock-Management-System-Front-end';
+  title = 'Inventory-Manage-front-end';
 }

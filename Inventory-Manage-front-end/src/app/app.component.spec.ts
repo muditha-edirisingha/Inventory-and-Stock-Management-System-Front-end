@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'Inventory-and-Stock-Management-System-Front-end' title`, () => {
+  it(`should have the 'Inventory-Manage-front-end' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Inventory-and-Stock-Management-System-Front-end');
+    expect(app.title).toEqual('Inventory-Manage-front-end');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Inventory-and-Stock-Management-System-Front-end');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Inventory-Manage-front-end');
   });
 });

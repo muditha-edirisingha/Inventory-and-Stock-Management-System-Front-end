@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Inventory-and-Stock-Management-System-Front-end": {
+    "Inventory-Manage-front-end": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/inventory-and-stock-management-system-front-end",
+            "outputPath": "dist/inventory-manage-front-end",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -28,11 +28,8 @@
             ],
             "styles": [
               "src/styles.css"
-              
             ],
-            "scripts": [
-              
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -62,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Inventory-and-Stock-Management-System-Front-end:build:production"
+              "buildTarget": "Inventory-Manage-front-end:build:production"
             },
             "development": {
-              "buildTarget": "Inventory-and-Stock-Management-System-Front-end:build:development"
+              "buildTarget": "Inventory-Manage-front-end:build:development"
             }
           },
           "defaultConfiguration": "development"
