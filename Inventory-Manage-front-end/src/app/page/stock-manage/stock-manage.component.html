@@ -1,1 +1,28 @@
-<p>stock-manage works!</p>
+<div class="overflow-x-auto">
+  <table class="w-full border border-gray-300 text-sm text-left">
+    <thead class="bg-gray-200">
+      <tr>
+        <th class="border px-4 py-2">Stock ID</th>
+        <th class="border px-4 py-2">Current Quntity</th>
+        <th class="border px-4 py-2">Date & Time</th>
+        <th class="border px-4 py-2">Product Id</th>
+        <th class="border px-4 py-2">Quntity Added</th>
+        <th class="border px-4 py-2">Quntity Removed</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr
+        *ngFor="let stock of stockList"
+        class="hover:bg-gray-100"
+      >
+        <td class="border px-4 py-2">{{stock.stockId}}</td>
+        <td class="border px-4 py-2">{{stock.currentQuntity}}</td>
+        <td class="border px-4 py-2">{{stock.dateTime}}</td>
+        <td class="border px-4 py-2">{{stock.productId}}</td>
+        <td class="border px-4 py-2">{{stock.quntityAdded}}</td>
+        <td class="border px-4 py-2">{{stock.quntityRemoved}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -21,6 +21,16 @@ export const routes: Routes = [
     },
     {
         path:"dashboard",
-        component:DashBoardPageComponent
+        component:DashBoardPageComponent,
+        children:[
+            {
+                path:"product",
+                component:ProductManageComponent
+            },
+            {
+                path:"stock",
+                component:StockManageComponent
+            }
+        ]
     }
 ];
