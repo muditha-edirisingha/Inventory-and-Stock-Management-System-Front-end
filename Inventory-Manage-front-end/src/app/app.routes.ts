@@ -3,6 +3,7 @@ import { ProductManageComponent } from './page/product-manage/product-manage.com
 import { StockManageComponent } from './page/stock-manage/stock-manage.component';
 import { LoginComponent } from './page/login/login.component';
 import { DashBoardPageComponent } from './page/dash-board-page/dash-board-page.component';
+import { SupplierManageComponent } from './page/supplier-manage/supplier-manage.component';
 
 export const routes: Routes = [
     {
@@ -20,6 +21,10 @@ export const routes: Routes = [
         component:StockManageComponent
     },
     {
+        path:"supplier",
+        component:StockManageComponent
+    },
+    {
         path:"dashboard",
         component:DashBoardPageComponent,
         children:[
@@ -30,6 +35,10 @@ export const routes: Routes = [
             {
                 path:"stock",
                 component:StockManageComponent
+            },
+            {
+                path:"supplier",
+                component:SupplierManageComponent 
             }
         ]
     }

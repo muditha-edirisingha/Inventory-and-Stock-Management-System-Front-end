@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-stock-manage',
   standalone: true,
-  imports: [HttpClientModule,CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule],
   templateUrl: './stock-manage.component.html',
   styleUrl: './stock-manage.component.css'
 })
@@ -24,6 +24,5 @@ export class StockManageComponent {
 
     })
   }
-  
 
 }
