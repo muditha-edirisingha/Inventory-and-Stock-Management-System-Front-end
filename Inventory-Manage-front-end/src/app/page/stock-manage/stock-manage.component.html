@@ -72,6 +72,15 @@
                     Stock ID
                 </th>
                 <th scope="col" class="px-6 py-3">
+                    Stock Type
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Product ID
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Product Name
+                </th>
+                <th scope="col" class="px-6 py-3">
                     Current Quntity 
                 </th>
                 <th scope="col" class="px-6 py-3">
@@ -83,9 +92,7 @@
                 <th scope="col" class="px-6 py-3">
                     Date Time
                 </th>
-                <th scope="col" class="px-6 py-3">
-                    Product ID
-                </th>
+                
                 
             </tr>
         </thead>
@@ -107,6 +114,15 @@
                     {{stock.stockId}}
                 </td>
                 <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {{stock.stockType}}
+                </td>
+                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {{stock.productId}}
+                </td>
+                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {{stock.productName}}
+                </td>
+                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     {{stock.currentQuntity}}
                 </td>
                 <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
@@ -117,9 +133,6 @@
                 </td>
                 <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     {{stock.dateTime}}
-                </td>
-                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    {{stock.productId}}
                 </td>
                 
             </tr>
