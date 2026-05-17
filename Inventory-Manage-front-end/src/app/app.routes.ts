@@ -18,6 +18,7 @@ import { ProductSearchNameComponent } from './page/product-search-name/product-s
 import { StockHistoryIdComponent } from './page/stock-history-id/stock-history-id.component';
 import { SupplierByIdComponent } from './page/supplier-by-id/supplier-by-id.component';
 import { SupplierByNameComponent } from './page/supplier-by-name/supplier-by-name.component';
+import { DashboardHomeComponent } from './page/dashboard-home/dashboard-home.component';
 
 export const routes: Routes = [
     {
@@ -44,7 +45,7 @@ export const routes: Routes = [
         children:[
             {
                 path:"",
-                component:DashBoardPageComponent
+                component:DashboardHomeComponent
             },
             {
                 path:"product",

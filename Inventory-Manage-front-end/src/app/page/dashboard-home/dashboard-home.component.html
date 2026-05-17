@@ -1,0 +1,131 @@
+<div class="p-6">
+
+    <!-- Welcome Card -->
+    <div class="mb-6 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-700 p-6 text-white shadow-lg">
+        <h1 class="text-3xl font-bold mb-2">Welcome Back 👋</h1>
+        <p class="text-blue-100">Inventory and Stock Management Dashboard</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+        <div
+            class="p-6 bg-white/90 backdrop-blur-sm border border-white/20 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+            <p class="text-sm text-gray-500">Total Products</p>
+            <h2 class="text-3xl font-bold text-gray-900">{{ totalProducts }}</h2>
+        </div>
+
+        <div
+            class="p-6 bg-white/90 backdrop-blur-sm border border-white/20 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+            <p class="text-sm text-gray-500">Stock In</p>
+            <h2 class="text-3xl font-bold text-green-600">{{ stockIn }}</h2>
+        </div>
+
+        <div
+            class="p-6 bg-white/90 backdrop-blur-sm border border-white/20 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+            <p class="text-sm text-gray-500">Stock Out</p>
+            <h2 class="text-3xl font-bold text-red-600">{{ stockOut }}</h2>
+        </div>
+
+        <div
+            class="p-6 bg-white/90 backdrop-blur-sm border border-white/20 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+            <p class="text-sm text-gray-500">Suppliers</p>
+            <h2 class="text-3xl font-bold text-purple-600">{{ suppliers }}</h2>
+        </div>
+
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8">
+
+        <!-- Recent Activity -->
+        <div
+            class="lg:col-span-2 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-sm hover:shadow-lg transition duration-300">
+
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+                Recent Stock Activity
+            </h3>
+
+            <div class="space-y-4">
+
+                <div
+                    class="flex items-center justify-between p-4 bg-slate-100 rounded-xl hover:bg-slate-200 transition duration-300">
+
+                    <span class="font-medium text-gray-800">
+                        Product stock updated
+                    </span>
+
+                    <span class="text-green-600 font-bold">
+                        STOCK IN
+                    </span>
+
+                </div>
+
+                <div
+                    class="flex items-center justify-between p-4 bg-slate-100 rounded-xl hover:bg-slate-200 transition duration-300">
+
+                    <span class="font-medium text-gray-800">
+                        Stock removed from inventory
+                    </span>
+
+                    <span class="text-red-600 font-bold">
+                        STOCK OUT
+                    </span>
+
+                </div>
+
+                <div
+                    class="flex items-center justify-between p-4 bg-slate-100 rounded-xl hover:bg-slate-200 transition duration-300">
+
+                    <span class="font-medium text-gray-800">
+                        New supplier added
+                    </span>
+
+                    <span class="text-blue-600 font-bold">
+                        SUPPLIER
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Quick Actions -->
+        <div
+            class="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-sm hover:shadow-lg transition duration-300">
+
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+                Quick Actions
+            </h3>
+
+            <div class="space-y-3">
+
+                <a routerLink="/dashboard/product/add-product"
+                    class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition duration-300 hover:scale-[1.02]">
+
+                    Add Product
+
+                </a>
+
+                <a routerLink="/dashboard/stock/add-stock"
+                    class="block text-center bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition duration-300 hover:scale-[1.02]">
+
+                    Add Stock
+
+                </a>
+
+                <a routerLink="/dashboard/stock/remove-stock"
+                    class="block text-center bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-xl transition duration-300 hover:scale-[1.02]">
+
+                    Remove Stock
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

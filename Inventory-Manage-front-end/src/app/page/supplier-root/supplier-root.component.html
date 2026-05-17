@@ -1,21 +1,43 @@
+<div class="mb-4 border-b border-gray-700">
+    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center gap-2">
 
+        <li>
+            <button routerLink="view-all-suppliers" class="inline-block px-5 py-3 rounded-xl transition-all duration-300
+                       text-gray-300 hover:text-white
+                       hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-600
+                       hover:shadow-lg hover:scale-105">
+                View All Suppliers
+            </button>
+        </li>
 
-<div class="mb-4 border-b border-gray-200 dark:border-gray-700">
-    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
-        <li class="me-2" role="presentation">
-            <button routerLink="view-all-suppliers" class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">View All Suppliers</button>
+        <li>
+            <button routerLink="add-supplier" class="inline-block px-5 py-3 rounded-xl transition-all duration-300
+                       text-gray-300 hover:text-white
+                       hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-600
+                       hover:shadow-lg hover:scale-105">
+                Add Supplier
+            </button>
         </li>
-        <li class="me-2" role="presentation">
-            <button routerLink="add-supplier" class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Add Supplier</button>
+
+        <li>
+            <button routerLink="supplier-search-id" class="inline-block px-5 py-3 rounded-xl transition-all duration-300
+                       text-gray-300 hover:text-white
+                       hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-600
+                       hover:shadow-lg hover:scale-105">
+                Supplier by ID
+            </button>
         </li>
-        <li class="me-2" role="presentation">
-            <button routerLink="supplier-search-id"  class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Supplier by ID</button>
+
+        <li>
+            <button routerLink="supplier-search-name" class="inline-block px-5 py-3 rounded-xl transition-all duration-300
+                       text-gray-300 hover:text-white
+                       hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-600
+                       hover:shadow-lg hover:scale-105">
+                Supplier by Name
+            </button>
         </li>
-        <li role="presentation">
-            <button routerLink="supplier-search-name" class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Supplier by Name</button>
-        </li>
+
     </ul>
 </div>
-
 
 <router-outlet></router-outlet>

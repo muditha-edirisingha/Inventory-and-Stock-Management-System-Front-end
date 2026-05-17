@@ -1,13 +1,12 @@
-
-
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-    
+
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="p-4">
                     <div class="flex items-center">
-                        <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <input id="checkbox-all-search" type="checkbox"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                         <label for="checkbox-all-search" class="sr-only">checkbox</label>
                     </div>
                 </th>
@@ -24,30 +23,37 @@
                     Status
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Current Quntity 
+                    Current Quntity
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Description
                 </th>
-                
-                
-                
-                
+
+
+
+
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let lowStock of lowStockList; index as i" class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <tr *ngFor="let lowStock of lowStockList; index as i"
+                class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="checkbox-table-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <input id="checkbox-table-3" type="checkbox"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                         <label for="checkbox-table-3" class="sr-only">checkbox</label>
                     </div>
                 </td>
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white font-extrabold">
-                    <span class="bg-gradient-to-r from-yellow-400 to-orange-500  text-black font-extrabold text-xl px-4 py-2 rounded-full shadow-lg shadow-yellow-500/50">
-                      {{i+1}}
+                <th scope="row"
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white font-extrabold">
+                    <span class="inline-flex items-center justify-center
+         w-7 h-7 rounded-lg
+         bg-gradient-to-br from-blue-500 to-indigo-600
+         text-white text-xs font-bold
+         shadow-md">
+                        {{i+1}}
                     </span>
-                    
+
                 </th>
                 <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     {{lowStock.productId}}
@@ -64,8 +70,8 @@
                 <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     {{lowStock.description}}
                 </td>
-                
-                
+
+
             </tr>
         </tbody>
     </table>
