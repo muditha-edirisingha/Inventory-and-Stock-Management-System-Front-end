@@ -19,13 +19,27 @@ import { StockHistoryIdComponent } from './page/stock-history-id/stock-history-i
 import { SupplierByIdComponent } from './page/supplier-by-id/supplier-by-id.component';
 import { SupplierByNameComponent } from './page/supplier-by-name/supplier-by-name.component';
 import { DashboardHomeComponent } from './page/dashboard-home/dashboard-home.component';
+import { RegisterComponent } from './page/register/register.component';
+import { LostPasswordComponent } from './page/lost-password/lost-password.component';
 
 export const routes: Routes = [
     {
         path:"",
         component:LoginComponent
     },
-
+    {
+        path:"login",
+        component:LoginComponent,
+    },
+    
+    {
+        path:"register",
+        component:RegisterComponent
+    },
+    {
+        path:"lost-password",
+        component:LostPasswordComponent
+    },
     {
         path:"product",
         component:ProductManageComponent
