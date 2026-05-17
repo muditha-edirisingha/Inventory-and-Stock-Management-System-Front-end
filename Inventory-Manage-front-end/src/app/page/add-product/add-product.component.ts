@@ -28,61 +28,59 @@ export class AddProductComponent {
 
   addProduct() {
 
-  // Validation
-  if (
-    !this.product.productName.trim() ||
-    !this.product.description.trim() ||
-    !this.product.unitPrice ||
-    !this.product.qty ||
-    !this.product.supplierId
-  ) {
+    // Validation
+    if (
+      !this.product.productName.trim() ||
+      !this.product.description.trim() ||
+      !this.product.unitPrice ||
+      !this.product.qty ||
+      !this.product.supplierId
+    ) {
 
-    Swal.fire({
-      title: "Warning!",
-      text: "Please fill all fields!",
-      icon: "warning"
-    });
+      Swal.fire({
+        title: "Warning!",
+        text: "Please fill all fields!",
+        icon: "warning"
+      });
 
-    return;
-  }
+      return;
+    }
 
-  this.http.post<any>("http://localhost:8080/product/add-product", this.product)
-    .subscribe({
+    this.http.post<any>("http://localhost:8080/product/add-product", this.product)
+      .subscribe({
 
-      next: (data) => {
+        next: (data) => {
 
-        Swal.fire({
-          title: "Good job!",
-          text: "Product added successfully!",
-          icon: "success"
-        });
+          Swal.fire({
+            title: "Good job!",
+            text: "Product added successfully!",
+            icon: "success"
+          });
 
-        // Clear form
-        this.product = {
-          productName: "",
-          description: "",
-          unitPrice: "",
-          qty: "",
-          supplierId: "",
+          // Clear form
+          this.product = {
+            productName: "",
+            description: "",
+            unitPrice: "",
+            qty: "",
+            supplierId: "",
+          }
+
+        },
+
+        error: () => {
+
+          Swal.fire({
+            title: "No existing Supplier!",
+            text: "Supplier ID not found",
+            icon: "error"
+          });
+
         }
 
-      },
+      });
 
-      error: (err) => {
-
-        console.log(err);
-
-        Swal.fire({
-          title: "Error!",
-          text: "Product not added!",
-          icon: "error"
-        });
-
-      }
-
-    });
-
-}
+  }
 
 
 }
