@@ -24,13 +24,47 @@ export class AddSupplierComponent {
   }
 
   addSupplier() {
-    this.http.post("http://localhost:8080/supplier/add-supplier", this.supplier).subscribe(data => {
-      console.log(data);
-      Swal.fire({
-        title: "Good job!",
-        text: "Supplier added successfully!",
-        icon: "success"
-      });
-    })
+
+  if (
+    !this.supplier.supplierName ||
+    !this.supplier.supplierTel ||
+    !this.supplier.email ||
+    !this.supplier.address
+  ) {
+    Swal.fire({
+      title: "Warning!",
+      text: "Please fill all fields!",
+      icon: "warning"
+    });
+    return;
   }
+
+  this.http.post("http://localhost:8080/supplier/add-supplier", this.supplier)
+    .subscribe({
+      next: (data) => {
+
+        Swal.fire({
+          title: "Good job!",
+          text: "Supplier added successfully!",
+          icon: "success"
+        });
+
+        this.supplier = {
+          supplierName: "",
+          supplierTel: "",
+          email: "",
+          address: "",
+        };
+
+      },
+
+      error: (err) => {
+        Swal.fire({
+          title: "Error!",
+          text: "Supplier not added!",
+          icon: "error"
+        });
+      }
+    });
+}
 }

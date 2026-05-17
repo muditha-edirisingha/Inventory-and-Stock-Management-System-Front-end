@@ -11,6 +11,13 @@ import { AddStockComponent } from './page/add-stock/add-stock.component';
 import { RemoveStockComponent } from './page/remove-stock/remove-stock.component';
 import { SupplierRootComponent } from './page/supplier-root/supplier-root.component';
 import { AddSupplierComponent } from './page/add-supplier/add-supplier.component';
+import { LowStockRootComponent } from './page/low-stock-root/low-stock-root.component';
+import { LowStockViewComponent } from './page/low-stock-view/low-stock-view.component';
+import { ProductSearchIdComponent } from './page/product-search-id/product-search-id.component';
+import { ProductSearchNameComponent } from './page/product-search-name/product-search-name.component';
+import { StockHistoryIdComponent } from './page/stock-history-id/stock-history-id.component';
+import { SupplierByIdComponent } from './page/supplier-by-id/supplier-by-id.component';
+import { SupplierByNameComponent } from './page/supplier-by-name/supplier-by-name.component';
 
 export const routes: Routes = [
     {
@@ -54,6 +61,14 @@ export const routes: Routes = [
                     {
                         path:"view-all",
                         component:ProductManageComponent
+                    },
+                    {
+                        path:"product-search-id",
+                        component:ProductSearchIdComponent
+                    },
+                    {
+                        path:"product-search-name",
+                        component:ProductSearchNameComponent
                     } 
 
                 ] 
@@ -78,6 +93,10 @@ export const routes: Routes = [
                     {
                         path:"remove-stock",
                         component:RemoveStockComponent
+                    },
+                    {
+                        path:"stock-search-id",
+                        component:StockHistoryIdComponent
                     }
                 
                 ]
@@ -97,8 +116,30 @@ export const routes: Routes = [
                     {
                         path:"add-supplier",
                         component:AddSupplierComponent
+                    },
+                    {
+                        path:"supplier-search-id",
+                        component:SupplierByIdComponent
+                    },
+                    {
+                        path:"supplier-search-name",
+                        component:SupplierByNameComponent
                     }
                 ] 
+            },
+            {
+                path:"low-stock",
+                component:LowStockRootComponent,
+                children:[
+                    {
+                        path:"",
+                        component:LowStockViewComponent
+                    },
+                    {
+                        path:"view-all-low-stocks",
+                        component:LowStockViewComponent
+                    }
+                ]
             }
         ]
     }

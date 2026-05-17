@@ -21,13 +21,32 @@ export class RemoveStockComponent {
 
 
   RemoveStock() {
-    const stockData = {
-      ...this.stock,
-      dateTime: new Date().toISOString().slice(0,19)
-    };
 
-    this.http.post<any>("http://localhost:8080/stock/reduce-stock", stockData)
-      .subscribe(data => {
+  // Validation
+  if (
+    !this.stock.quntityRemoved ||
+    !this.stock.productId
+  ) {
+
+    Swal.fire({
+      title: "Warning!",
+      text: "Please fill all fields!",
+      icon: "warning"
+    });
+
+    return;
+  }
+
+  const stockData = {
+    ...this.stock,
+    dateTime: new Date().toISOString().slice(0, 19)
+  };
+
+  this.http.post<any>("http://localhost:8080/stock/reduce-stock", stockData)
+    .subscribe({
+
+      next: (data) => {
+
         console.log(data);
 
         Swal.fire({
@@ -36,12 +55,29 @@ export class RemoveStockComponent {
           icon: "success"
         });
 
+        // Clear fields
         this.stock = {
           quntityRemoved: "",
           productId: ""
         };
-      });
-  }
+
+      },
+
+      error: (err) => {
+
+        console.log(err);
+
+        Swal.fire({
+          title: "Error!",
+          text: "Stock not removed!",
+          icon: "error"
+        });
+
+      }
+
+    });
+
+}
 
 
 }

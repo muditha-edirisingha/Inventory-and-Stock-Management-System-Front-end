@@ -21,23 +21,56 @@ export class AddStockComponent {
 
 
   addStock() {
+
+    // Validation
+    if (
+      !this.stock.quntityAdded ||
+      !this.stock.productId
+    ) {
+      Swal.fire({
+        title: "Warning!",
+        text: "Please fill all fields!",
+        icon: "warning"
+      });
+
+      return;
+    }
+
     const stockData = {
       ...this.stock,
       dateTime: new Date().toISOString()
     };
 
     this.http.post<any>("http://localhost:8080/stock/add-stock", stockData)
-      .subscribe(data => {
-        Swal.fire({
-          title: "Good job!",
-          text: "Stock added successfully!",
-          icon: "success"
-        });
+      .subscribe({
 
-        this.stock = {
-          quantityAdded: "",
-          productId: ""
-        };
+        next: (data) => {
+
+          Swal.fire({
+            title: "Good job!",
+            text: "Stock added successfully!",
+            icon: "success"
+          });
+
+          // Clear fields
+          this.stock = {
+            quntityAdded: "",
+            productId: ""
+          };
+
+        },
+
+        error: (err) => {
+          console.log(err);
+
+          Swal.fire({
+            title: "Error!",
+            text: "Stock not added!",
+            icon: "error"
+          });
+        }
+
       });
+
   }
 }

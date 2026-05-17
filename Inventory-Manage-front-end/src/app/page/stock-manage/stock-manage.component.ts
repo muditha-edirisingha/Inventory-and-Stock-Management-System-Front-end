@@ -18,7 +18,7 @@ export class StockManageComponent {
   }   
   
   loadStock(){
-    this.http.get("http://localhost:8080/report/get-stock-history").subscribe(data=>{
+    this.http.get("http://localhost:8080/stock/get-all-stocks").subscribe(data=>{
         this.stockList = data;
         console.log(data);
 
